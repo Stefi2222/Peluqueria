@@ -75,7 +75,7 @@ header {
 .sidebar {
   position: fixed;
   top: 0;
-  left: -250px; /* Oculto por defecto */
+  left: 0px; /* Oculto por defecto */
   width: 250px;
   height: 100%;
   background-color: #ff2c2c;

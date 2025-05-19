@@ -1,11 +1,16 @@
-document.querySelector('.menu-toggle').addEventListener('click', function () {
-    document.querySelector('.menu').classList.toggle('active');
-});
+
+  const boton = document.getElementById("hamburguesa");
+  const menu = document.getElementById("nav");
+
+  boton.addEventListener("click", () => {
+    menu.classList.toggle("activo"); // ðŸ”„ Abre o cierra el menÃº
+  });
 
 
-// Manejar el envío del formulario
+
+// Manejar el envÃ­o del formulario
 function submitForm(event) {
-    event.preventDefault(); // Evitar que la página se recargue al enviar el formulario
+    event.preventDefault(); // Evitar que la pÃ¡gina se recargue al enviar el formulario
 
     // Obtener los valores del formulario
     const form = event.target;
@@ -20,7 +25,7 @@ function submitForm(event) {
         Descripcion: form.Descripcion.value    // Cambiado para que coincida con el campo del HTML
     };
 
-    // Validar datos básicos (puedes personalizar estas validaciones)
+    // Validar datos bÃ¡sicos (puedes personalizar estas validaciones)
     if (!formData.ID_Servicio || !formData.Nom_Cliente || !formData.Telefono || !formData.Correo || !formData.Fecha_Reserva) {
         alert('Por favor, completa todos los campos requeridos.');
         return;
@@ -42,12 +47,12 @@ function submitForm(event) {
             }
         })
         .then(data => {
-            alert(`¡Cita reservada con éxito!`);
-            form.reset(); // Limpiar el formulario después de enviarlo
+            alert(`Â¡Cita reservada con Ã©xito!`);
+            form.reset(); // Limpiar el formulario despuÃ©s de enviarlo
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('Ocurrió un error al procesar la reserva.');
+            alert('OcurriÃ³ un error al procesar la reserva.');
         });
 }
 
@@ -60,7 +65,7 @@ async function cargarServicios() {
         // Referencia al elemento select
         const select = document.querySelector('select[name="ID_Servicio"]');
 
-        // Agregar cada servicio como una opción
+        // Agregar cada servicio como una opciÃ³n
         servicios.forEach(servicio => {
             const option = document.createElement('option');
             option.value = servicio.ID_Servicio;

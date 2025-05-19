@@ -1,13 +1,4 @@
 
-  const boton = document.getElementById("hamburguesa");
-  const menu = document.getElementById("nav");
-
-  boton.addEventListener("click", () => {
-    menu.classList.toggle("activo"); // 🔄 Abre o cierra el menú
-  });
-
-
-
 // Manejar el envío del formulario
 function submitForm(event) {
     event.preventDefault(); // Evitar que la página se recargue al enviar el formulario

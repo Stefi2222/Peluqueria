@@ -31,45 +31,7 @@ header {
   padding: 10px;
 }
 
-.nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
 
-.hamburguesa {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-/* Responsive: solo se aplica en pantallas pequeñas */
-@media (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
-    display: none; /* Oculta por defecto */
-  }
-
-  .nav.activo ul {
-    display: flex;
-  }
-
-  .hamburguesa {
-    display: block;
-  }
-}
-
-.logo {
-    margin: 0;
-    font-family: "Dancing Script", cursive;
-    /* 1er Fuente de letra obtenida de Google Fonts*/
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    transition: transform 0.3s;
-    font-size: 3.5rem;
-    border: none;
-    text-align: center;
-}
 
 .logo:hover {
     transform: translateY(-5px);

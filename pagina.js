@@ -1,3 +1,11 @@
+  document.addEventListener("DOMContentLoaded", function () {
+    const boton = document.getElementById("hamburguesa");
+    const menu = document.getElementById("sidebar");
+
+    boton.addEventListener("click", () => {
+      menu.classList.toggle("activo");
+    });
+  });
 
 // Manejar el envío del formulario
 function submitForm(event) {

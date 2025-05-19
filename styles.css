@@ -103,64 +103,44 @@ header {
     width: 147px;
 }
 
-.menu-toggle {
-    background-color: #333;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    margin-left: 54px;
+.hamburguesa {
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
 }
 
-.menu-toggle:hover {
-    background-color: #bb9457;
+/* Menú lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Oculto por defecto */
+  width: 250px;
+  height: 100%;
+  background-color: #ff2c2c;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+  z-index: 1000;
 }
 
-.menu li {
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
-    border: none;
-    text-align: justify;
+.sidebar ul {
+  list-style: none;
+  padding: 0;
 }
 
-.menu li a {
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-size: larger;
+.sidebar li {
+  padding: 15px 20px;
 }
 
-.menu li a:hover {
-    color: #fff
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* Para pantallas móviles (320px a 480px) */
-@media (max-width: 480px) {
-    .logo {
-        font-size: 2rem; 
-    }
-
-    .menu {
-        width: 100%; 
-        left: 0; 
-    }
-
-    .menu li {
-        padding: 8px;
-        cursor: pointer;
-    }
-    .menu li a:hover {
-        color: #fff
-    }
-
-    .menu-toggle {
-        font-size: 0.9rem;
-    }
+/* Clase activa para mostrar */
+.sidebar.activo {
+  left: 0;
 }
-
 /* -------------------------------  Hero Section -------------------------------------*/
 
 .hero {

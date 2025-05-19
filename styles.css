@@ -23,6 +23,41 @@ nav {
     align-items: center;
     /* Centrar verticalmente los elementos del nav */
 }
+/* Estilo general */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.hamburguesa {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Responsive: solo se aplica en pantallas pequeñas */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    display: none; /* Oculta por defecto */
+  }
+
+  .nav.activo ul {
+    display: flex;
+  }
+
+  .hamburguesa {
+    display: block;
+  }
+}
 
 .logo {
     margin: 0;
